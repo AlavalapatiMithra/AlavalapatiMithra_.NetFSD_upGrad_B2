@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Student Registration Form</h1>
+    </header>
+
+    <section>
+        <form action="#" method="post">
+
+            <!-- Name -->
+            <div>
+                <label for="name">Full Name:</label><br>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required
+                >
+            </div>
+
+            <br>
+
+            <!-- Email -->
+            <div>
+                <label for="email">Email Address:</label><br>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required
+                >
+            </div>
+
+            <br>
+
+            <!-- Phone -->
+            <div>
+                <label for="phone">Phone Number:</label><br>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone"
+                    pattern="[0-9]{10}"
+                    placeholder="10-digit number"
+                    required
+                >
+            </div>
+
+            <br>
+
+            <!-- Age -->
+            <div>
+                <label for="age">Age:</label><br>
+                <input 
+                    type="number" 
+                    id="age" 
+                    name="age"
+                    min="16"
+                    max="60"
+                    required
+                >
+            </div>
+
+            <br>
+
+            <!-- Date of Birth -->
+            <div>
+                <label for="dob">Date of Birth:</label><br>
+                <input 
+                    type="date" 
+                    id="dob" 
+                    name="dob"
+                    required
+                >
+            </div>
+
+            <br>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit">Register</button>
+            </div>
+
+        </form>
+    </section>
+
+</body>
+</html>

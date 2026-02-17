@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Enrollment Form</title>
+</head>
+<body>
+
+<header>
+    <h1>Online Course Enrollment</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Enroll Now</h2>
+
+        <!-- Static Enrollment Progress -->
+        <p>Enrollment Completion Status:</p>
+        <progress value="60" max="100">60%</progress>
+
+        <hr>
+
+        <form action="#" method="post">
+
+            <!-- Name -->
+            <div>
+                <label for="fullname">Full Name:</label><br>
+                <input 
+                    type="text" 
+                    id="fullname" 
+                    name="fullname" 
+                    required>
+            </div>
+
+            <br>
+
+            <!-- Email -->
+            <div>
+                <label for="email">Email Address:</label><br>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required>
+            </div>
+
+            <br>
+
+            <!-- Course Selection with Datalist -->
+            <div>
+                <label for="course">Select Course:</label><br>
+                <input 
+                    list="course-options" 
+                    id="course" 
+                    name="course" 
+                    placeholder="Start typing..."
+                    required>
+
+                <datalist id="course-options">
+                    <option value="HTML Fundamentals">
+                    <option value="CSS Basics">
+                    <option value="JavaScript Essentials">
+                    <option value="Python Programming">
+                    <option value="Data Science Introduction">
+                </datalist>
+            </div>
+
+            <br>
+
+            <!-- Skill Level using Range -->
+            <div>
+                <label for="experience">Years of Experience:</label><br>
+                <input 
+                    type="range" 
+                    id="experience" 
+                    name="experience" 
+                    min="0" 
+                    max="10" 
+                    value="2">
+            </div>
+
+            <br>
+
+            <!-- Skill Level Indicator using Meter -->
+            <div>
+                <label>Skill Level:</label><br>
+                <meter 
+                    min="0" 
+                    max="100" 
+                    low="30" 
+                    high="70" 
+                    optimum="80" 
+                    value="65">
+                    65 out of 100
+                </meter>
+                <p>(Beginner → Intermediate → Advanced)</p>
+            </div>
+
+            <br>
+
+            <!-- Age -->
+            <div>
+                <label for="age">Age:</label><br>
+                <input 
+                    type="number" 
+                    id="age" 
+                    name="age"
+                    min="16"
+                    max="65"
+                    required>
+            </div>
+
+            <br>
+
+            <!-- Submit -->
+            <div>
+                <button type="submit">Enroll</button>
+            </div>
+
+        </form>
+    </section>
+</main>
+
+</body>
+</html>
