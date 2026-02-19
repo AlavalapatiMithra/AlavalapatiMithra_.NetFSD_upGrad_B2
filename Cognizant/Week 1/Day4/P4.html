@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Analysis Tool</title>
+</head>
+<body>
+
+    <h2>Open Console to See Number Analysis</h2>
+
+    <script>
+        let num = 8;   
+        let sign = (num >= 0) ? "Positive" : "Negative";
+        console.log("Number is:", sign);
+        if (num % 2 === 0) {
+            console.log("Number is Even");
+        } else {
+            console.log("Number is Odd");
+        }
+        console.log("Numbers from 1 to " + num + ":");
+
+        for (let i = 1; i <= num; i++) {
+            console.log(i);
+        }
+
+    </script>
+
+</body>
+</html>
