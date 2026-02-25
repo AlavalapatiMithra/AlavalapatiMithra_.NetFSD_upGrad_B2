@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Notes Saver</title>
+</head>
+<body>
+
+    <h2>Personal Notes Saver</h2>
+
+    <textarea id="noteArea" rows="10" cols="40" placeholder="Write your daily notes here..."></textarea>
+    <br><br>
+    <button onclick="saveNote()">Save</button>
+    <button onclick="clearNote()">Clear</button>
+
+    <script>
+        function saveNote() {
+            let noteText = document.getElementById("noteArea").value;
+            localStorage.setItem("dailyNote", noteText);
+
+            alert("Note Saved Successfully!");
+        }
+        function clearNote() {
+            localStorage.removeItem("dailyNote");
+            document.getElementById("noteArea").value = "";
+
+            alert("Note Cleared!");
+        }
+        window.onload = function() {
+            let savedNote = localStorage.getItem("dailyNote");
+
+            if (savedNote !== null) {
+                document.getElementById("noteArea").value = savedNote;
+            }
+        }
+    </script>
+
+</body>
+</html>

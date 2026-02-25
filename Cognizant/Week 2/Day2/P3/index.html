@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Data Fetcher</title>
+</head>
+<body>
+
+<h2>🌦 Weather Data Fetcher</h2>
+
+<input type="number" id="lat" placeholder="Latitude (e.g. 17.3850)">
+<input type="number" id="lon" placeholder="Longitude (e.g. 78.4867)">
+
+<button onclick="getWeatherWithPromises()">Fetch (Promises)</button>
+<button onclick="getWeatherAsync()">Fetch (Async/Await)</button>
+
+<pre id="output"></pre>
+
+<script type="module" src="weather.js"></script>
+
+</body>
+</html>
