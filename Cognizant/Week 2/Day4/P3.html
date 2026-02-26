@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Registration Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container my-5">
+
+    <h2 class="text-center mb-4">Training Institute Registration Dashboard</h2>
+
+    <div class="row g-4">
+        <div class="col-lg-5 col-md-12">
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+
+                    <h4 class="mb-3">Register Student</h4>
+
+                    <form class="row g-3 needs-validation" novalidate>
+
+                        <div class="col-12">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Please enter name.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Course</label>
+                            <select class="form-select" required>
+                                <option value="">Select Course</option>
+                                <option>Web Development</option>
+                                <option>Data Science</option>
+                                <option>UI/UX Design</option>
+                                <option>Cyber Security</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a course.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Please enter valid email.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Contact Number</label>
+                            <input type="tel" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Please enter contact number.
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary px-4">
+                                Register
+                            </button>
+                            <button type="reset" class="btn btn-secondary px-4 ms-2">
+                                Reset
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-7 col-md-12">
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+
+                    <h4 class="mb-3">Registered Students</h4>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered table-hover text-center align-middle">
+
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Course</th>
+                                    <th>Email</th>
+                                    <th>Contact</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Aarav Sharma</td>
+                                    <td>Web Development</td>
+                                    <td>aarav@email.com</td>
+                                    <td>9876543210</td>
+                                </tr>
+                                <tr>
+                                    <td>Diya Patel</td>
+                                    <td>Data Science</td>
+                                    <td>diya@email.com</td>
+                                    <td>8765432109</td>
+                                </tr>
+                                <tr>
+                                    <td>Rohan Mehta</td>
+                                    <td>UI/UX Design</td>
+                                    <td>rohan@email.com</td>
+                                    <td>7654321098</td>
+                                </tr>
+                                <tr>
+                                    <td>Sneha Iyer</td>
+                                    <td>Cyber Security</td>
+                                    <td>sneha@email.com</td>
+                                    <td>6543210987</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+(() => {
+    'use strict';
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+})();
+</script>
+
+</body>
+</html>
