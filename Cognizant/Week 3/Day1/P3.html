@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Cart Counter</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+.confirmation {
+    font-size: 14px;
+    margin-left: 10px;
+    color: green;
+}
+</style>
+
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <span class="navbar-brand">MyShop</span>
+        <span class="text-white">
+            🛒 Cart: <span id="cartCount" class="badge bg-warning text-dark">0</span>
+        </span>
+    </div>
+</nav>
+<div class="container mt-5">
+    <div class="row" id="productList">
+
+        <div class="col-md-3 mb-4">
+            <div class="card p-3 text-center">
+                <h5>Laptop</h5>
+                <p>$1200</p>
+                <button class="btn btn-primary add-to-cart" data-product="Laptop">
+                    Add to Cart
+                </button>
+                <span class="confirmation"></span>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card p-3 text-center">
+                <h5>Smartphone</h5>
+                <p>$700</p>
+                <button class="btn btn-primary add-to-cart" data-product="Smartphone">
+                    Add to Cart
+                </button>
+                <span class="confirmation"></span>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card p-3 text-center">
+                <h5>Headphones</h5>
+                <p>$150</p>
+                <button class="btn btn-primary add-to-cart" data-product="Headphones">
+                    Add to Cart
+                </button>
+                <span class="confirmation"></span>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card p-3 text-center">
+                <h5>Smartwatch</h5>
+                <p>$250</p>
+                <button class="btn btn-primary add-to-cart" data-product="Smartwatch">
+                    Add to Cart
+                </button>
+                <span class="confirmation"></span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+    var cartCounter = 0;
+    $("#productList").on("click", ".add-to-cart", function(){
+        cartCounter++;
+        $("#cartCount").text(cartCounter);
+        $(this).prop("disabled", true);
+        $(this).text("Added");
+        $(this).attr("data-added", "true");
+        $(this).siblings(".confirmation")
+               .text("Added successfully");
+
+    });
+
+});
+</script>
+
+</body>
+</html>

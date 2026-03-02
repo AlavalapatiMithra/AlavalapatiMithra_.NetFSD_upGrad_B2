@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ Toggle Section</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+.faq-question {
+    cursor: pointer;
+    padding: 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.faq-answer {
+    display: none;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    background-color: #ffffff;
+}
+
+.active-question {
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+</style>
+
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+
+    <div id="faqSection">
+
+        <div class="faq-item">
+            <div class="faq-question">1. What courses do you offer?</div>
+            <div class="faq-answer">We offer Web Development, Data Science, Python Programming, and UI/UX Design courses.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">2. Do you provide certification?</div>
+            <div class="faq-answer">Yes, we provide industry-recognized certification after successful course completion.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">3. Are the classes online or offline?</div>
+            <div class="faq-answer">We provide both online and classroom training options.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">4. What is the course duration?</div>
+            <div class="faq-answer">Course duration varies from 4 to 12 weeks depending on the program.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">5. Is there placement assistance?</div>
+            <div class="faq-answer">Yes, we offer placement support including resume building and interview preparation.</div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+    $(".faq-question").click(function(){
+        $(".faq-question").removeClass("active-question");
+        $(this).addClass("active-question");
+        $(this).next(".faq-answer").slideToggle();
+        $(".faq-answer").not($(this).next()).slideUp();
+    });
+
+});
+</script>
+
+</body>
+</html>
